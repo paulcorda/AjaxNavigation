@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<paulc_modules translate="label" module="ajaxnavigation">
+			<label>PaulC Modules</label>
+			<sort_order>1000</sort_order>
+		</paulc_modules>
+	</tabs>
+	
+	<sections>
+		<paulc_ajaxnavigation translate="label" module="ajaxnavigation">
+			<label>Ajax Navigation</label>
+			<tab>paulc_modules</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>0</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<general translate="label comment">
+                    <label>General</label>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label comment">
+                            <label>Active</label>
+                            <comment>Activate module.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <jquery translate="label comment">
+                            <label>Include jQuery</label>
+                            <comment>Check if jQuery is not already included.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </jquery>
+                    </fields>
+				</general>
+			</groups>
+		</paulc_ajaxnavigation>
+	</sections>
+</config>

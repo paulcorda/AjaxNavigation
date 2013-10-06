@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Paulc_AjaxNavigation>
+      <active>true</active>
+      <codePool>community</codePool>
+      <version>0.1.0</version>
+    </Paulc_AjaxNavigation>
+  </modules>
+</config>

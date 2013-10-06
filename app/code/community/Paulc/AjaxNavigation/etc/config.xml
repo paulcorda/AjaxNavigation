@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Paulc_AjaxNavigation>
+			<version>0.1.0</version>
+		</Paulc_AjaxNavigation>
+	</modules>
+	
+	<frontend>
+		<!-- Override core controllers -->
+		<routers>
+	    	<catalog>
+	    		<args>
+	     			<modules>
+	      				<Paulc_AjaxNavigation before="Mage_Catalog">Paulc_AjaxNavigation_Catalog</Paulc_AjaxNavigation>
+	     			</modules>
+	    		</args>
+	   		</catalog>
+	   		
+	   		<catalogsearch>
+	    		<args>
+	     			<modules>
+	      				<Paulc_AjaxNavigation before="Mage_CatalogSearch">Paulc_AjaxNavigation_CatalogSearch</Paulc_AjaxNavigation>
+	     			</modules>
+	    		</args>
+	   		</catalogsearch>
+  		</routers>
+  		<!-- /Override core controllers -->
+		
+		<layout>
+            <updates>
+                <paulc_ajaxnavigation>
+                    <file>paulc/ajaxnavigation.xml</file>
+                </paulc_ajaxnavigation>
+            </updates>
+        </layout>
+	</frontend>
+	
+	<global>
+		<helpers>
+			<ajaxnavigation>
+				<class>Paulc_AjaxNavigation_Helper</class>
+			</ajaxnavigation>
+		</helpers>
+	</global>
+	
+	<default>
+		<paulc_ajaxnavigation>
+			<general>
+				<active>0</active>
+				<jquery>0</jquery>
+			</general>
+		</paulc_ajaxnavigation>
+	</default>
+</config> 

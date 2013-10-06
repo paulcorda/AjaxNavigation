@@ -1,0 +1,9 @@
+#ajaxnavigation_loader {
+	background: url(../images/ajax-loader.gif) no-repeat;
+	height: 32px;
+	width: 32px;
+	position: fixed;
+	z-index: 999;
+	left: 50%;
+	top: 50%;
+}
