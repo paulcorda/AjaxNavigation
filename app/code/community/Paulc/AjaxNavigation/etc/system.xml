@@ -6,7 +6,7 @@
 			<sort_order>1000</sort_order>
 		</paulc_modules>
 	</tabs>
-	
+
 	<sections>
 		<paulc_ajaxnavigation translate="label" module="ajaxnavigation">
 			<label>Ajax Navigation</label>
@@ -29,7 +29,7 @@
                             <comment>Activate module.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>1</sort_order>
+                            <sort_order>0</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
@@ -39,10 +39,11 @@
                             <comment>Check if jQuery is not already included.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>2</sort_order>
+                            <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
+                            <depends><active>1</active></depends>
                         </jquery>
                     </fields>
 				</general>

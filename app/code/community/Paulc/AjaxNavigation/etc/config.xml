@@ -2,12 +2,12 @@
 <config>
 	<modules>
 		<Paulc_AjaxNavigation>
-			<version>0.1.0</version>
+			<version>0.2.0</version>
 		</Paulc_AjaxNavigation>
 	</modules>
-	
+
+
 	<frontend>
-		<!-- Override core controllers -->
 		<routers>
 	    	<catalog>
 	    		<args>
@@ -25,8 +25,7 @@
 	    		</args>
 	   		</catalogsearch>
   		</routers>
-  		<!-- /Override core controllers -->
-		
+
 		<layout>
             <updates>
                 <paulc_ajaxnavigation>
@@ -35,7 +34,8 @@
             </updates>
         </layout>
 	</frontend>
-	
+
+
 	<global>
 		<helpers>
 			<ajaxnavigation>
@@ -43,7 +43,8 @@
 			</ajaxnavigation>
 		</helpers>
 	</global>
-	
+
+
 	<default>
 		<paulc_ajaxnavigation>
 			<general>

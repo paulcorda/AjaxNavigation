@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
-	<catalog_category_layered translate="label">
+	<catalog_category_layered>
 		<reference name="head">
-			<action method="addItem" ifconfig="paulc_ajaxnavigation/general/jquery"><type>skin_js</type><name>paulc/ajaxnavigation/js/jquery-1.10.2.min.js</name></action>
 			<action method="addCss"  ifconfig="paulc_ajaxnavigation/general/active"><stylesheet>paulc/ajaxnavigation/css/ajaxnavigation.css</stylesheet></action>
+			<action method="addItem" ifconfig="paulc_ajaxnavigation/general/jquery"><type>skin_js</type><name>paulc/ajaxnavigation/js/jquery-1.10.2.min.js</name></action>
 			<action method="addItem" ifconfig="paulc_ajaxnavigation/general/active"><type>skin_js</type><name>paulc/ajaxnavigation/js/ajaxnavigation.js</name></action>  
 		</reference>
 	</catalog_category_layered>
-	
-    <catalogsearch_result_index translate="label">
+
+    <catalogsearch_result_index>
     	<reference name="head">
-			<action method="addItem" ifconfig="paulc_ajaxnavigation/general/jquery"><type>skin_js</type><name>paulc/ajaxnavigation/js/jquery-1.10.2.min.js</name></action>
     		<action method="addCss"  ifconfig="paulc_ajaxnavigation/general/active"><stylesheet>paulc/ajaxnavigation/css/ajaxnavigation.css</stylesheet></action>
+			<action method="addItem" ifconfig="paulc_ajaxnavigation/general/jquery"><type>skin_js</type><name>paulc/ajaxnavigation/js/jquery-1.10.2.min.js</name></action>
 			<action method="addItem" ifconfig="paulc_ajaxnavigation/general/active"><type>skin_js</type><name>paulc/ajaxnavigation/js/ajaxnavigation.js</name></action>  
 		</reference>
     </catalogsearch_result_index>

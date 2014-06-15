@@ -1,7 +1,23 @@
-#ajaxnavigation_loader {
+body {
+	position: relative;
+}
+#ajaxnavigation_overlay {
+	background-color: #333;
+	position: absolute;
+	top: 0;
+	z-index: 99;
+	height: 100%;
+	width: 100%;
+	filter: alpha(opacity=80);
+	-khtml-opacity: .8;
+	-moz-opacity: .8;
+	opacity: .8;
+}
+.ajaxnavigation_loader {
 	background: url(../images/ajax-loader.gif) no-repeat;
 	height: 32px;
 	width: 32px;
+	margin: -16px 0 0 -16px;
 	position: fixed;
 	z-index: 999;
 	left: 50%;
