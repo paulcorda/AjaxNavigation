@@ -1,7 +1,10 @@
 body {
 	position: relative;
 }
-#ajaxnavigation_overlay {
+body.wait {
+	cursor: wait;
+}
+#paulc_ajaxnavigation_overlay {
 	background-color: #333;
 	position: absolute;
 	top: 0;
@@ -13,7 +16,7 @@ body {
 	-moz-opacity: .8;
 	opacity: .8;
 }
-.ajaxnavigation_loader {
+.paulc_ajaxnavigation_loader {
 	background: url(../images/ajax-loader.gif) no-repeat;
 	height: 32px;
 	width: 32px;

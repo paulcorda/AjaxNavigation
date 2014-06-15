@@ -1,12 +1,19 @@
 (function($) {
-$(document).ready(function() {
+	function AjaxLoading(option) {
+		var loader = '<div id="paulc_ajaxnavigation_overlay"><div class="paulc_ajaxnavigation_loader"></div></div>';
 
-	function AjaxNavigation(el, url) {
-		var loader = '<div id="ajaxnavigation_overlay"><div class="ajaxnavigation_loader"></div></div>';
+		if(option == 'show') {
+			$('body').addClass('wait')
+					 .append(loader);
+		}
+		else {
+			$('body').removeClass('wait');
+			$('#paulc_ajaxnavigation_overlay').remove();
+		}
+	}
 
-		el.click(function() {
-			$('body').css('cursor', 'wait');
-			$('body').append(loader);
+	function AjaxNavigation(url) {
+			AjaxLoading('show');
 
 			$.ajax({
 				url: url,
@@ -20,28 +27,25 @@ $(document).ready(function() {
 
 					if(data.list) {
 						$('.category-products').replaceWith(data.list);
-						$('.toolbar select').removeAttr('onchange');
+						$('.limiter > select, .sort-by > select').removeAttr('onchange');
 					}
 				},
 				complete: function() {
-					$('body').css('cursor', 'auto');
-					$('#ajaxnavigation_overlay').remove();
+					AjaxLoading('hide');
 				}
 			});
-		});
 	};
 
+	$(document).ready(function() {
+		$(document).on('click', '.block-layered-nav a, .view-mode > a, .sort-by > a', function(e) {
+			AjaxNavigation($(this).attr('href'));
+			e.preventDefault();
+		});
 
-	$(document).on('click', '.block-layered-nav a, .view-mode > a, .sort-by > a', function(e) {
-		AjaxNavigation($(this), $(this).attr('href'));
-		e.preventDefault();
+		$('.limiter > select, .sort-by > select').removeAttr('onchange');
+		$(document).on('change', '.limiter > select, .sort-by > select', function(e) {
+			$(this).removeAttr('onchange');
+			AjaxNavigation($(this).val());
+		});
 	});
-
-
-	$('.toolbar select').removeAttr('onchange');
-	$(document).on('change', '.limiter > select, .sort-by > select', function(e) {
-		AjaxNavigation($(this), $(this).val());
-		e.preventDefault();
-	});
-});
 })(jQuery);

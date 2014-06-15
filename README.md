@@ -14,3 +14,8 @@
 
 ###v. 0.2.0
 - Minor fixes and improvements
+
+###v. 0.2.1
+- JavaScript improvements:
+  - Fixed the '2 click' error
+  - Replaced direct JavaScript styling with addClass + CSS styling
